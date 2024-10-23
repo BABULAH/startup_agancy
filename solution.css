@@ -1,0 +1,780 @@
+/* Global Styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  /* Navbar Styles */
+/* Navbar Styles */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 80px;
+    box-shadow: 0px 4px 2px -2px rgb(216, 214, 214);
+    z-index: 1000; /* Assure que la navbar reste au-dessus des autres éléments */
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  .nav-links li {
+    margin: 0 15px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  .register-button {
+    background-color: white;
+    border: 2px solid #993399;
+    color: #993399;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 150px; /* Ajuste la valeur pour déplacer le bouton */
+    border-radius: 5px;
+    padding: 15px 30px;
+  }  
+  
+  .register-button:hover {
+    background-color: #993399;
+    color: white;
+  }
+  
+  /* Sections */
+  .home {
+    background-color: #f4f4f4;
+  }
+  /* Styles pour la section Home */
+  .home-container {
+    display: flex; /* Utiliser Flexbox pour la disposition */
+    justify-content: space-between; /* Espace entre les colonnes */
+    align-items: flex-start; /* Aligner les colonnes en haut */
+    padding: 50px; /* Espacement interne */
+    padding-top: 100px;
+  }
+  
+  .left-column {
+    flex: 1; /* Prendre toute la largeur restante */
+    margin-right: 100px; /* Espace entre les colonnes */
+  }
+  .left-column p {
+    font-size: 18px; /* Augmente la taille de la police */
+    line-height: 0.5; /* Ajuste l'espacement entre les lignes */
+    margin-bottom: 20px; /* Espace en bas si nécessaire */
+    text-align: left; /* Alignement à droite */
+    line-height: 2;
+  }
+  
+  .quote h3 {
+    font-size:55px; /* Augmente la taille de la police ici */
+    margin-bottom: 20px; /* Espace en bas */
+    text-align: left; /* Alignement à droite */
+    line-height: 1.5;
+  }
+  
+  
+  
+  .right-column {
+    flex: 1; /* Prendre toute la largeur restante */
+    margin-left: 20px; /* Espace entre les colonnes */
+  }
+  
+  
+  .quote {
+    font-size: 24px; /* Taille du texte pour le h3 */
+    margin-bottom: 20px; /* Espace en bas */
+  }
+  
+  .subscribe-form {
+    display: flex; /* Disposition en ligne */
+    margin-bottom: 60px; /* Espace en bas */
+  }
+  
+  .subscribe-form input {
+    flex: 1; /* Prendre toute la largeur disponible */
+    padding: 15px; /* Espacement interne */
+    margin-right: 10px; /* Espace entre le champ et le bouton */
+    border: none; /* Supprimer la bordure */
+    outline: none; /* Supprimer l'effet de contour lors du focus */
+    border-radius: 2px;
+    font-size: 18px; /* Augmente la taille de la police */
+  }
+  
+  .subscribe-form button {
+    padding: 20px 60px; /* Espacement interne */
+    background-color: #993399; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprimer la bordure */
+    cursor: pointer; /* Pointeur de la souris sur le bouton */
+    border-radius: 4px;
+    font-size: 18px; /* Augmente la taille de la police */
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #993399; /* Couleur sur hover */
+  }
+  
+  .sponsors {
+    display: flex; /* Disposition en ligne */
+    align-items: center; /* Aligner verticalement */
+    gap: 10px; /* Espacement entre le texte et les logos */
+  }
+  
+  .sponsor-logos {
+    display: flex; /* Disposition en ligne */
+    gap: 50px; /* Espacement entre les logos */
+  }
+  
+  .sponsor-logos img {
+    height: 40px; /* Taille des logos */
+  }
+  
+  
+  
+  .sponsor-logos img {
+    height: 25px; /* Ajuster la taille des logos des sponsors */
+  }
+  
+  .right-column img {
+    width: 100%; /* Prendre toute la largeur de la colonne */
+    height: auto; /* Garder les proportions de l'image */
+  }
+
+  .services {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  .services h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .services .subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    
+  }
+  
+  .service-items {
+    display: flex; /* Utiliser Flexbox pour disposer les services en ligne */
+    justify-content: space-between; /* Espace égal entre chaque service */
+    align-items: flex-start; /* Aligner les éléments au début */
+  }
+  
+  .service-item {
+    flex: 1; /* Chaque service occupe une part égale de l'espace */
+    max-width: 22%; /* Limite la largeur maximale pour garder 4 éléments par ligne */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 10px; /* Espace entre les services */
+  }
+  
+  .service-item img.service-logo {
+    width: 60px; /* Taille uniforme pour tous les logos SVG */
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .service-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    
+  }
+  
+  .service-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 2;
+  }
+  
+  .icon-container {
+    padding: 20px; /* Espacement interne */
+    border-radius: 30%; /* Coins arrondis pour un effet circulaire */
+    display: inline-block; /* Permet d'ajuster la taille au contenu */
+    margin-bottom: 20px; /* Espace en bas de l'icône */
+  }
+  
+  .yellow {
+    background-color: #ffeb99; /* Couleur de fond jaune */
+  }
+  
+  .light-blue {
+    background-color: #99ebff; /* Couleur de fond bleu clair */
+  }
+  
+  .dark-blue {
+    background-color: #66a3ff; /* Couleur de fond bleu foncé */
+    color: white; /* Texte en blanc pour un meilleur contraste */
+  }
+  
+  .red {
+    background-color: #ff9980; /* Couleur de fond rouge */
+    color: white; /* Texte en blanc pour un meilleur contraste */
+  }
+  
+  .service-logo {
+    width: 60px; /* Ajuste la taille de l'icône */
+    height: 60px;
+  }
+
+  .new-section {
+    display: flex; /* Utiliser Flexbox pour aligner les colonnes */
+    padding: 50px; /* Espacement interne de la section */
+    background-color: #f9f9f9; /* Couleur de fond légère */
+  }
+  
+  .left-column,
+  .right-column {
+    flex: 1; /* Les deux colonnes prennent la même largeur */
+    margin: 0 15px; /* Espace horizontal entre les colonnes */
+    margin-left: 40px; /* Augmente l'espace à gauche de la colonne droite */
+  }
+  
+
+  .left-image {
+    width: 580px; /* Définir la largeur de l'image en pixels */
+    height: auto; /* Permet de conserver le rapport hauteur/largeur */
+    border-radius: 10px; /* Coins arrondis pour l'image */
+    margin-top: -20px; /* Optionnel : pour ajuster la position de l'image vers le haut */
+  }
+  
+  
+  .right-column h2 {
+    font-size: 28px; /* Taille de la police du titre */
+    margin-bottom: 10px; /* Espace en bas du titre */
+  }
+  
+  .right-column .subtitle {
+    font-size: 18px; /* Taille de la police du sous-titre */
+    color: #999; /* Couleur grise pour le texte du sous-titre */
+    margin-bottom: 30px; /* Espace en bas du sous-titre */
+    font-family: Arial, sans-serif; /* Changer la police en Arial */
+  }
+  
+  .right-content p {
+    color: #999; /* Couleur grise pour les paragraphes */
+    font-family: Arial, sans-serif; /* Changer la police en Arial */
+  }
+  
+  
+  .content-item {
+    display: flex; /* Utiliser Flexbox pour aligner l'icône et le texte */
+    align-items: center; /* Centre verticalement */
+    margin-bottom: 20px; /* Espace entre les paragraphes */
+  }
+  
+    .icon-circle {
+    border-radius: 50%; /* Forme circulaire */
+    padding: 10px; /* Espacement interne */
+    margin-right: 15px; /* Espace entre l'icône et le texte */
+  }
+  
+.icon-circle {
+    position: relative; /* Nécessaire pour le positionnement absolu du pseudo-élément */
+    display: inline-block; /* Pour s'assurer que le pseudo-élément se positionne correctement */
+}
+
+.icon-circle img {
+    filter: grayscale(100%); /* Applique un filtre de niveau de gris à l'icône */
+    width: 20px; /* Taille de l'icône */
+    height: 20px; /* Taille de l'icône */
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+}
+
+.icon-circle::after {
+    content: ''; /* Nécessaire pour créer un pseudo-élément */
+    position: absolute; /* Permet de le positionner par rapport à .icon-circle */
+    top: 0; /* Aligner en haut */
+    left: 0; /* Aligner à gauche */
+    right: 0; /* Aligner à droite */
+    bottom: 0; /* Aligner en bas */
+    background: rgba(255, 255, 255, 0.5); /* Couleur blanche avec transparence */
+    filter: blur(5px); /* Applique un flou */
+    border-radius: 50%; /* Arrondir les bords pour que ça ressemble à un cercle */
+    pointer-events: none; /* Ignore les événements de souris sur le pseudo-élément */
+}
+
+
+  
+  
+  .learn-more {
+    display: inline-flex; /* Utiliser Flexbox pour aligner l'icône et le texte */
+    align-items: center; /* Centre verticalement l'icône et le texte */
+    margin-top: 20px; /* Espace au-dessus du lien */
+    color: #993399; /* Couleur du texte du lien */
+    text-decoration: none; /* Supprimer le soulignement */
+    font-family: Arial, sans-serif; /* Changer la police en Arial */
+  }
+  
+  
+  .learn-more .icon-circle {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+  }
+  
+  .details-section {
+    text-align: center; /* Centrer le texte */
+    margin: 40px 0; /* Espace autour de la section */
+  }
+  
+  .details-section h2 {
+    font-family: Arial, sans-serif; /* Police pour le titre */
+    font-size: 24px; /* Taille du titre */
+    margin-bottom: 20px; /* Espace en bas du titre */
+  }
+  
+  .description {
+    font-family: Arial, sans-serif; /* Police pour la description */
+    color: #666; /* Couleur grise pour la description */
+    margin-bottom: 20px; /* Espace en bas de la description */
+  }
+  
+  .explore-details {
+    color: #993399; /* Couleur du lien */
+    text-decoration: none; /* Supprime le soulignement */
+    font-family: Arial, sans-serif; /* Police pour le lien */
+    margin-bottom: 20px; /* Espace en bas du lien */
+    display: inline-block; /* Permet de donner un espace en bas */
+  }
+  
+  .explore-details::after {
+    content: " >"; /* Ajoute le signe supérieur après le texte */
+    margin-left: 5px; /* Espace entre le texte et le signe supérieur */
+    font-size: 18px; /* Taille du signe supérieur */
+    color: #993399; /* Couleur du signe supérieur */
+  }
+  
+  
+  .video-container {
+    position: relative;
+    max-width: 70%; /* Largeur maximale pour occuper tout l'espace disponible */
+    margin: 0 auto;
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+  }
+  
+  .video-cover {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .video-cover img {
+    width: 100%; /* Largeur de l'image à 100% pour occuper tout le conteneur */
+    height: auto; /* Maintient les proportions de l'image */
+    border-radius: 10px;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #800080;
+    background-color: white; /* Mauve par défaut */
+    width: 130px; /* Largeur du cercle */
+    height: 130px; /* Hauteur du cercle */
+    border-radius: 50%; /* Rond */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: #800080;
+    color: white;
+    border-color: white;
+  }
+  
+  #video-iframe {
+    width: 100%; /* Vidéo occupe toute la largeur du conteneur */
+    height: 500px; /* Hauteur augmentée pour avoir une grande vidéo */
+    display: none; /* Masqué par défaut */
+  }
+  
+  
+  iframe {
+    width: 100%;
+    height: 450px;
+  }
+  
+
+  /* Testimonials css */
+  .testimonials-section {
+    text-align: center; /* Centre le texte et les témoignages */
+  }
+  
+  .testimonials-container {
+    position: relative; /* Pour positionner correctement les éléments */
+    display: inline-block; /* Pour centrer l'ensemble du contenu */
+  }
+
+  .client-feedback {
+    text-align: center; /* Centrer le texte à l'intérieur de la section */
+    padding: 40px 20px; /* Ajouter du padding pour espacer le contenu */
+    color: #464545; /* Couleur grise (tu peux ajuster la valeur selon tes besoins) */
+  }
+  
+  .header {
+    margin-bottom: 20px; /* Espacement entre le titre et les témoignages */
+  }
+  
+  .swiper-container {
+    width: 100%; /* S'assurer qu'il prend toute la largeur */
+    max-width: 1200px; /* Largeur maximale pour centrer */
+    margin: 0 auto; /* Centrer le conteneur */
+  }
+  
+  .swiper-slide {
+    display: flex; /* Utiliser flex pour centrer le contenu dans le slide */
+    flex-direction: column; /* Aligner les éléments verticalement */
+    align-items: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer verticalement */
+  }
+  
+  
+  .client-image {
+    margin-bottom: 15px; /* Espacement entre l'image et le témoignage */
+    width: 100px; /* Ajuster la largeur de l'image selon les besoins */
+    height: auto; /* Garder le ratio d'aspect */
+  }
+  
+  
+  .subtitle {
+    font-weight: bold;
+    color: #800080; /* Couleur mauve pour le sous-titre */
+  }
+  
+  .swiper-slide p {
+    font-size: 20px; /* Augmente la taille de la police selon tes préférences */
+    margin: 10px 0; /* Ajoute un peu d'espace autour du texte */
+    margin-bottom: 40px; /* Augmente l'espace en dessous de la section */
+  }
+  
+
+  
+  .client-image + p {
+    font-family: 'The Youngest Serif', serif; /* Changer la police */
+    font-size: 2.3em; /* Augmente la taille de la police */
+    line-height: 1.5; /* Ajuste l'interligne selon tes préférences */
+    margin-top: 10px; /* Espace entre l'image et le texte */
+  }
+
+  .image-container {
+    position: relative; /* Pour positionner la ligne mauve */
+    overflow: hidden; /* Masquer les débordements */
+    display: flex; /* Pour aligner les images horizontalement */
+    justify-content: center; /* Centrer les images */
+  }
+
+  .image-line {
+    position: absolute; /* Positionnement absolu pour la ligne mauve */
+    height: 4px; /* Diminuer la hauteur de la ligne */
+    background-color: #800080; /* Couleur mauve */
+    width: 40%; /* Largeur de la ligne (modifiable selon les préférences) */
+    top: -5px; /* Positionner la ligne légèrement au-dessus de l'image */
+    left: 50%; /* Centrer la ligne */
+    transform: translateX(-50%); /* Ajuster pour centrer la ligne */
+    z-index: 1; /* Mettre la ligne au-dessus des images */
+    margin: 5px; /* Réduit l'espace horizontal entre les images */
+  }
+  
+  .customer-support {
+    padding: 40px; /* Espace autour de la section */
+    background-color: #f9f9f9; /* Couleur de fond */
+    margin-bottom: 40px; /* Augmente l'espace en dessous de la section */
+  }
+  
+  .content {
+    display: flex; /* Utiliser Flexbox pour aligner le texte et l'image */
+    justify-content: space-between; /* Espacement entre le texte et l'image */
+    align-items: center; /* Centrer verticalement */
+    max-width: 1200px; /* Largeur maximale pour la section */
+    margin: 0 auto; /* Centrer la section */
+  }
+  
+  .text-container {
+    max-width: 600px; /* Largeur maximale du conteneur de texte */
+  }
+  
+  .support-title {
+    font-size: 28px; /* Taille de police pour le titre */
+    margin-bottom: 40px; /* Espacement en dessous du titre */
+    line-height: 1.5; /* Ajuster l'espacement entre les lignes */
+    color: #333; /* Couleur du texte */
+  }
+  
+  .support-description, .support-note {
+    color: #555; /* Couleur gris pour les descriptions */
+    margin-bottom: 15px; /* Espacement entre les paragraphes */
+    line-height: 2; /* Augmente l'espace entre les lignes */
+  }
+  
+  .gray-text {
+    color: #a09d9d; /* Couleur grise */
+  }  
+  
+  .learn-more {
+    color: #800080; /* Couleur du lien */
+    text-decoration: none; /* Enlever le soulignement */
+    font-weight: bold; /* Mettre en gras */
+  }
+  
+  .learn-more svg {
+    margin-left: 5px; /* Espacement entre le texte et l'icône */
+  }
+  
+  .image-container {
+    flex: 1; /* Permet à l'image de prendre la largeur restante */
+    display: flex; /* Centrer l'image dans son conteneur */
+    justify-content: center; /* Centrer horizontalement */
+  }
+  
+  .support-image {
+    max-width: 100%; /* S'assurer que l'image ne déborde pas */
+    height: auto; /* Garder le ratio d'aspect */
+  }
+
+  /* Tutoriel css */
+/* Section générale */
+.tutorial-section {
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px; /* Espace au-dessus de la section */
+  margin-bottom: 40px; /* Espace en dessous de la section */
+  background-color: rgb(244, 246, 247);
+}
+
+/* Sous-titre */
+.subtitle {
+  font-size: 16px;
+  color: #800080;
+}
+
+/* Titre */
+.title {
+  font-size: 28px;
+  margin: 10px 0;
+  color: #343a40;
+}
+
+.tutorial {
+  width: 30%; /* Ajustez la largeur des tutoriels */
+  text-align: center; /* Centrer le texte à l'intérieur des tutoriels */
+  display: flex; /* Utiliser flexbox pour centrer le contenu */
+  flex-direction: column; /* Organiser les éléments en colonne */
+  align-items: center; /* Centrer horizontalement les éléments */
+  justify-content: center; /* Centrer verticalement les éléments */
+  margin: 20px; /* Espace autour de chaque tutoriel */
+}
+
+
+/* Conteneur des tutoriels */
+.tutorials-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Carte d'un tutoriel */
+.tutorial-card {
+  width: 370px;
+  background-color: white;
+  border: 1px solid #d8dadb;
+  border-radius: 8px;
+  padding: 0px;
+  text-align: left;
+  text-align: center; /* Centrer le texte */
+  flex-direction: column; /* Empiler les éléments verticalement */
+  align-items: flex-start; /* Aligner à gauche */
+}
+
+/* Image dans la carte */
+.tutorial-image {
+  width: 370px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.tutorial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre les éléments horizontalement */
+}
+
+.tutorial-par {
+  display: flex;
+  flex-direction: column; /* Aligne les éléments en colonne */
+  align-items: flex-start; /* Aligne le contenu à gauche */
+  max-width: 400px; /* Ajuste la largeur maximale si nécessaire */
+  margin: 0 auto; /* Centre le conteneur horizontalement */
+}
+
+.tutorial-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000; /* Texte noir foncé */
+  transition: color 0.3s; /* Ajoute une transition douce pour le changement de couleur */
+  line-height: 2; /* Ajuste l'espacement entre les lignes */
+  font-family: 'Arial Black', sans-serif; /* Change la police en Arial Black */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.comments {
+  display: flex;
+  align-items: center; /* Centre verticalement l'icône et le texte */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+
+.tutorial-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000; /* Texte noir foncé */
+  transition: color 0.3s; /* Ajoute une transition douce pour le changement de couleur */
+  line-height: 2; /* Ajuste l'espacement entre les lignes */
+  font-family: 'Arial Black', sans-serif; /* Change la police en Arial Black */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+
+/* Changer la couleur du texte au survol */
+.tutorial-card:hover .tutorial-description {
+  color: #6f42c1; /* Couleur mauve */
+}
+
+/* Section des commentaires */
+.comments {
+  display: flex; /* Utilise flexbox pour l'alignement */
+  align-items: center; /* Centre verticalement l'icône et le texte */
+  font-size: 16px; /* Taille de police pour le texte */
+  color: #000; /* Couleur du texte */
+  margin-bottom: 40px; /* Augmente l'espace en dessous de la section */
+}
+
+.comment-icon {
+  margin-right: 5px; /* Ajoute un petit espace entre l'icône et le texte */
+}
+
+/* Custom Section Styles */
+.custom-section {
+  background-color: #993399; /* Couleur de fond mauve */
+  padding: 40px; /* Espacement interne */
+  color: white; /* Couleur du texte par défaut */
+  max-width: 1050px; /* Largeur maximum de la section */
+  margin: 0 auto; /* Centrer la section horizontalement */
+  margin-bottom: 50px; /* Augmenter l'espace en dessous de la section */
+  border-radius: 10px;
+}
+
+.custom-container {
+  display: flex; /* Utiliser Flexbox pour la disposition */
+  justify-content: space-between; /* Espace entre les colonnes */
+  align-items: center; /* Alignement vertical au centre */
+}
+
+.left-column {
+  flex: 1; /* Prendre toute la largeur restante */
+}
+
+.left-column h3 {
+  font-size: 24px; /* Taille de la police pour le h3 */
+}
+
+.right-column {
+  flex: 1; /* Prendre toute la largeur restante */
+  text-align: right; /* Alignement à droite */
+}
+
+.custom-button {
+  background-color: white; /* Couleur de fond par défaut */
+  color: #993399; /* Couleur du texte par défaut */
+  border: none; /* Supprimer la bordure */
+  padding: 15px 30px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Pointeur de la souris sur le bouton */
+  font-size: 16px; /* Taille de la police */
+  display: inline-flex; /* Disposition en ligne pour l'icône et le texte */
+  align-items: center; /* Centre verticalement */
+}
+
+.custom-button:hover {
+  background-color: #001f3f; /* Couleur de fond au survol */
+  color: white; /* Couleur du texte au survol */
+}
+
+.icon-before,
+.icon-after {
+  margin: 0 10px; /* Espace entre l'icône et le texte */
+}
+
+.footer {
+  background-color: white; /* Couleur de fond du footer en blanc */
+  color: #333; /* Couleur du texte en gris foncé */
+  padding: 20px; /* Espacement interne */
+  margin-bottom: 40px; /* Augmente l'espace en dessous du footer */
+}
+
+.footer-container {
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  justify-content: space-between; /* Espacement entre les éléments */
+  align-items: center; /* Centre verticalement les éléments */
+  max-width: 1200px; /* Largeur maximum */
+  margin: 0 auto; /* Centre le footer */
+}
+
+.logo img {
+  height: 50px; /* Hauteur du logo */
+}
+
+.footer-text {
+  text-align: center; /* Centre le texte */
+  flex: 1; /* Permet au texte de prendre l'espace restant */
+  color: #888; /* Couleur du texte grisée */
+}
+
+.footer-links {
+  display: flex; /* Utilise flexbox pour aligner les liens */
+  gap: 25px; /* Augmente l'espacement entre les liens */
+}
+
+
+.footer-links a {
+  color: #333; /* Couleur des liens en gris foncé */
+  text-decoration: none; /* Supprime le soulignement */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Soulignement au survol */
+}
+
+
+
