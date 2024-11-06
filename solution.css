@@ -505,6 +505,8 @@ body, ul, li {
     z-index: 1; /* Mettre la ligne au-dessus des images */
     margin: 5px; /* Réduit l'espace horizontal entre les images */
   }
+
+  
   
   .customer-support {
     padding: 40px; /* Espace autour de la section */

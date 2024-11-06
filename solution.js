@@ -1,12 +1,3 @@
-document.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 50) { // Ajuste la valeur si nécessaire
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-
 const testimonials = document.querySelectorAll('.swiper-slide'); // Tous les témoignages
 const images = document.querySelectorAll('.image-container .swiper-slide'); // Toutes les images
 const imageLines = document.querySelectorAll('.image-line'); // Lignes mauves pour chaque image
@@ -32,26 +23,18 @@ const testimonialSwiper = new Swiper('#testimonialsContent', {
 const imageSwiper = new Swiper('.image-container', {
   slidesPerView: 3, // Affiche 3 images à la fois
   loop: true, // Boucle les images
-  spaceBetween: 10, // Espacement entre les images
-  autoplay: {
-    delay: 3000, // Délai entre les slides des images
-  },
-  navigation: {
-    nextEl: '.swiper-button-next', // Bouton suivant (si nécessaire)
-    prevEl: '.swiper-button-prev', // Bouton précédent (si nécessaire)
-  },
 });
 
 // Gérer le changement d'index pour les témoignages
 function updateImageLine() {
   const activeIndex = testimonialSwiper.realIndex; // Récupérer l'index du témoignage actif
 
-  // Réinitialise toutes les lignes (les cache toutes)
+  // Réinitialise toutes les lignes
   imageLines.forEach((line) => {
     line.style.display = 'none'; // Cache toutes les lignes mauves
   });
 
-  // Déterminer quels indices d'images afficher en fonction du témoignage
+  // Déterminer quels indices d'images afficher
   const displayIndices = [
     [0, 1, 2], // Pour le témoignage 1
     [1, 2, 3], // Pour le témoignage 2
@@ -60,18 +43,13 @@ function updateImageLine() {
     [4, 0, 1], // Pour le témoignage 5
   ][activeIndex]; // Récupérer les indices en fonction du témoignage actif
 
-  // Cache toutes les images
-  images.forEach((img, index) => {
-    img.style.display = 'none'; // Cache toutes les images
-  });
-
   // Affiche les images correspondantes
   displayIndices.forEach((index) => {
-    images[index].style.display = 'block'; // Affiche les images
+    images[index].style.display = 'block'; // Affiche l'image
   });
 
-  // Affiche la ligne mauve pour l'image correspondante au témoignage actif
-  const correspondingIndex = displayIndices[1]; // L'index de l'image correspondant au témoignage actif
+  // Affiche la ligne mauve pour l'image correspondant au témoignage actif
+  const correspondingIndex = displayIndices[0]; // L'index de la première image à afficher
   imageLines[correspondingIndex].style.display = 'block'; // Affiche la ligne mauve pour l'image correspondante
 }
 
@@ -80,3 +58,39 @@ testimonialSwiper.on('slideChange', updateImageLine);
 
 // Initialisation de l'état initial
 updateImageLine();
+
+// Tutoriel JavaScript
+const swiper = new Swiper('#tutorialsSwiper', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
+
+
+// la responsivite de la barre de navigation
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('active'); // Ajoute ou supprime la classe 'active'
+  });
+});
